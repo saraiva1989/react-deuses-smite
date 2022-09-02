@@ -21,7 +21,7 @@ export function Card(conteudo: cardProp) {
     const compartilhar = (nomeEN: string, nome: string, id:number) => {
         console.log(nomeEN + nome)
         if (navigator.share) {
-            var url = `/detalhe-deusm?id=${id}`
+            var url = `/#/detalhe-deusm?id=${id}`
             navigator.share({
                 title: 'Deuses Smite',
                 text: `Veja mais sobre a ${nome}`,
