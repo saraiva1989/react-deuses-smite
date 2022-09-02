@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { Card } from "../componentes/card"
 import { Loading } from "../componentes/loading"
 import { Modal } from "../componentes/modal"
+import { Topo } from "../componentes/topo"
 import { useGeral } from "../contexts/geralContext"
 import { useListaDeuses } from "../contexts/listaDeusesContext"
 import { cardProp } from "../models/types"
@@ -27,10 +28,7 @@ export function ListaDeuses() {
             <Loading />
             <Modal />
             <div id="principal">
-                <div id="topo" className="topo">
-                    <div className="logo"><img src="/imagens/smite-logo.webp" alt="" /></div>
-                    <div className="search" onClick={() => setGeral({ modal: true })}><img src="/imagens/search.png" alt="" /></div>
-                </div>
+                <Topo mostrarPesquisa={true} />
                 <div id="conteudo" onClick={() => setGeral({ modal: false })}>
                     {
                         listaDeuses.listaDeusesFiltro.map((element: cardProp, index: number) => {

@@ -13,7 +13,6 @@ export function Modal() {
     const { listaDeuses, setListaDeuses }: any = useListaDeuses();
     const { geral, setGeral }: any = useGeral();
 
-    
     const setNome = (e:any) => {
         nome = e.target.value;
      };
@@ -50,8 +49,6 @@ export function Modal() {
         }
         filtro = filtro.filter((x: { classe: string; }) => x.classe.toLowerCase().includes(classe.toLowerCase()))
     }
-
-
 
     return (
         <div>

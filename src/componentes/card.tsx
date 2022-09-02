@@ -16,7 +16,6 @@ function detalhes() {
 }
 
 export function Card(conteudo: cardProp) {
-    const { detalhe, setDetalhe }: any = useListaDeuses();
 
     const compartilhar = (nomeEN: string, nome: string, id:number) => {
         console.log(nomeEN + nome)
@@ -41,7 +40,6 @@ export function Card(conteudo: cardProp) {
                 <div className="nome">
                     <h1><b>{conteudo.nome}</b></h1>
                 </div>
-
             </div>
 
             <div className="detalhe-deus">
