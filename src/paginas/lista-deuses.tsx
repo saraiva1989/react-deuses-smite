@@ -28,8 +28,8 @@ export function ListaDeuses() {
             <Modal />
             <div id="principal">
                 <div id="topo" className="topo">
-                    <div className="logo"><img src="../src/img/smite-logo.webp" alt="" /></div>
-                    <div className="search" onClick={() => setGeral({ modal: true })}><img src="../src/img/search.png" alt="" /></div>
+                    <div className="logo"><img src="/imagens/smite-logo.webp" alt="" /></div>
+                    <div className="search" onClick={() => setGeral({ modal: true })}><img src="/imagens/search.png" alt="" /></div>
                 </div>
                 <div id="conteudo" onClick={() => setGeral({ modal: false })}>
                     {
