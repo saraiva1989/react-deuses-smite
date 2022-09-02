@@ -12,7 +12,7 @@ export function Rotas() {
         <Router>
             <Routes>
                 <Route path="/detalhe-deus" element={<DetalheDeus />} />
-                <Route path="/lista-deuses" element={<ListaDeuses />} />
+                <Route path="/" element={<ListaDeuses />} />
                 <Route path="/detalhe-deusm" element={<DetalheDeusm />} />
             </Routes>
         </Router>
