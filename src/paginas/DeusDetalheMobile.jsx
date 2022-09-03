@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 
 let id = ''
-export function DetalheDeus() {
+export function DeusDetalheMobile() {
     const location = useLocation();
 //   const { id }: any = location.state;
 const getId = () => {

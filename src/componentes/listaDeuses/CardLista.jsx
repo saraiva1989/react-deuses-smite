@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
-import { useListaDeuses } from "../contexts/listaDeusesContext";
-import { useGeral } from "../contexts/geralContext";
-import { cardProp } from "../models/types";
 
-
-let url: string = "/detalhe-deus"
-let sharedButton: boolean = false
+let url = "/detalhe-deus"
+let sharedButton = false
 detalhes()
 function detalhes() {
     console.log(window.innerWidth)
@@ -15,9 +11,9 @@ function detalhes() {
     }
 }
 
-export function Card(conteudo: cardProp) {
+export function CardLista(conteudo) {
 
-    const compartilhar = (nomeEN: string, nome: string, id:number) => {
+    const compartilhar = (nomeEN, nome, id) => {
         console.log(nomeEN + nome)
         if (navigator.share) {
             var url = `/#/detalhe-deusm?id=${id}`
@@ -36,7 +32,7 @@ export function Card(conteudo: cardProp) {
     return (
         <div id="card-deus" className="card-deus">
             <div className="avatar">
-                <img src={conteudo.imagem} className="avatar-background" loading="lazy" />
+                <img src={conteudo.imagem.replace('\'', '')} className="avatar-background" loading="lazy" />
                 <div className="nome">
                     <h1><b>{conteudo.nome}</b></h1>
                 </div>

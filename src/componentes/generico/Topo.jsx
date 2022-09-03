@@ -1,10 +1,7 @@
-import { useGeral } from "../contexts/geralContext";
+import { useGeral } from "../../contextos/GeralContext";
 
-type Props = {
-    mostrarPesquisa: boolean;
-}
-export function Topo(prop: Props) {
-    const { geral, setGeral }: any = useGeral();
+export function Topo(prop) {
+    const { geral, setGeral } = useGeral();
     return (
         <div id="topo" className="topo">
             <div className="logo"><img src="/imagens/smite-logo.webp" alt="" /></div>

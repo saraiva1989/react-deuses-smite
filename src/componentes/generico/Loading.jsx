@@ -1,7 +1,6 @@
-import { useGeral } from "../contexts/geralContext";
-
+import { useGeral } from "../../contextos/GeralContext";
 export function Loading() {
-    const { geral }: any = useGeral();
+    const { geral } = useGeral()
     return (
         <div>
             {geral.loading &&

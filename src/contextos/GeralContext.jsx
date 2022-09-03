@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const GeralContext = React.createContext({})
 
-export const GeralProvider = (props: any) => {
+export const GeralProvider = (props) => {
     const [geral, setGeral] = useState({
         loading: false,
         modal: false,
