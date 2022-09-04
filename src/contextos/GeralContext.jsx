@@ -6,6 +6,7 @@ export const GeralProvider = (props) => {
     const [geral, setGeral] = useState({
         loading: false,
         modal: false,
+        detalhe: {}
     })
 
     return (

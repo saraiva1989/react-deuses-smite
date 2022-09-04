@@ -1,7 +1,7 @@
 import { 
     HashRouter as Router,
     Routes,
-    Route
+    Route,
 } from "react-router-dom";
 import { DeusDetalhe } from "./paginas/DeusDetalhe";
 import { DeusDetalheMobile } from "./paginas/DeusDetalheMobile";

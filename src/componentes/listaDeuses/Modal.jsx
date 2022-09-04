@@ -13,23 +13,23 @@ export function Modal() {
     const { lista, setLista } = useLista();
     const { geral, setGeral } = useGeral();
 
-    function setNome() {
+    function setNome(e) {
         nome = e.target.value;
     };
-    function setCultura() {
+    function setCultura(e) {
         cultura = e.target.value;
     };
-    function setClasse() {
+    function setClasse(e) {
         classe = e.target.value;
     };
 
     function pesquisa() {
-        setListaDeuses({ listaDeDeuses: lista.listaDeDeuses, listaDeusesFiltro: lista.listaDeDeuses })
+        setLista({ listaDeDeuses: lista.listaDeDeuses, listaDeusesFiltro: lista.listaDeDeuses })
         filtro = lista.listaDeDeuses
         pesquisarDeus()
         pesquisarCultura()
         pesquisarClasse()
-        setListaDeuses({ listaDeDeuses: lista.listaDeDeuses, listaDeusesFiltro: filtro })
+        setLista({ listaDeDeuses: lista.listaDeDeuses, listaDeusesFiltro: filtro })
     }
 
     function pesquisarDeus() {

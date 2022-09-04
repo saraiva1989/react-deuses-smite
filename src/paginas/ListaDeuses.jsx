@@ -11,13 +11,12 @@ export function ListaDeuses() {
     const { lista, setLista } = useLista();
 
     useEffect(() => {
-        setGeral({loading: true})
-        const fetchData = async () => {
+        setGeral({ loading: true })
+        async function fetchData() {
             const result = await fetch('https://smite.azurewebsites.net//api/Deuses/Listar')
             const data = await result.json()
-            console.log(data)
-            setLista({listaDeDeuses:data, listaDeusesFiltro: data})
-            setGeral({loading: false})
+            setLista({ listaDeDeuses: data, listaDeusesFiltro: data })
+            setGeral({ loading: false })
         }
         fetchData()
     }, [])
@@ -27,7 +26,7 @@ export function ListaDeuses() {
             <Loading />
             <Modal />
             <div id="principal">
-                <Topo mostrarPesquisa={true} />
+                <Topo mostrarPesquisa={true} classeCss={"logo"} />
                 <div id="conteudo" onClick={() => setGeral({ modal: false })}>
                     {
                         lista.listaDeusesFiltro.map((element, index) => {
