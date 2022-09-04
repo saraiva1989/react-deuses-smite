@@ -6,7 +6,6 @@ detalhes()
 function detalhes() {
     console.log(window.innerWidth)
     if (window.innerWidth < 1025) {
-        url = '/detalhe-deusm'
         sharedButton = true
     }
 }
@@ -15,7 +14,7 @@ export function CardLista(conteudo) {
 
     const compartilhar = (nomeEN, nome) => {
         if (navigator.share) {
-            var url = `/#/detalhe-deusm?slug=${nomeEN}`
+            var url = `/#/detalhe-deus?slug=${nomeEN}`
             navigator.share({
                 title: 'Deuses Smite',
                 text: `Veja mais sobre a ${nome}`,

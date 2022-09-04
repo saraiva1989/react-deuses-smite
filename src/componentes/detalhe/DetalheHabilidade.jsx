@@ -3,7 +3,7 @@ import { useGeral } from "../../contextos/GeralContext"
 import { ModalHabilidade } from "./ModalHabilidade"
 
 
-export function DetlheHabilidade() {
+export function DetalheHabilidade() {
     const { geral, setGeral } = useGeral()
     const [video, setVideo] = useState()
     const [altura, setAltura] = useState()
